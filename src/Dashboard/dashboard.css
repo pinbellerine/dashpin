@@ -1,0 +1,50 @@
+/* Define default (light mode) styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --chart-bg: #f0f0f0;
+  --chart-border: #ddd; /* Optional, for chart borders */
+}
+
+/* Define dark mode styles */
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --chart-bg: #333333;
+  --chart-border: #444; /* Optional, for chart borders */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Dashboard styles */
+.Awal, .List, .chartsGrid, .chart {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  background-color: var(--bg-color);
+}
+
+.chart {
+  display: flex;
+  background-color: var(--chart-bg);
+  border: 1px solid var(--chart-border); /* Optional, for borders */
+  height: 400px;
+  width: 750px;
+  border-radius: 8px;
+  padding: 1rem;
+}
